@@ -1,0 +1,36 @@
+    {/* <Timer 
+    totalDuration={10000} 
+    secs 
+    reset = {true}
+    start={true}
+    handleFinish={()=>navigation.navigate("Home")}
+    /> */}
+    import { Stopwatch, Timer } from 'react-native-stopwatch-timer'
+
+
+
+   TO make an apk we have to first make a eas.json file in our application
+   add following: 
+   {
+    "build": {
+      "preview": {
+        "android": {
+          "buildType": "apk"
+        }
+      },
+      "preview2": {
+        "android": {
+          "gradleCommand": ":app:assembleRelease"
+        }
+      },
+      "preview3": {
+        "developmentClient": true
+      },
+      "production": {}
+    }
+  }
+
+
+    then Build AK BY following command 
+
+    eas build -p android --profile preview
